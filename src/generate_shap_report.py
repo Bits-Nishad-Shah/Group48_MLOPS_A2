@@ -1,7 +1,5 @@
 import shap, pandas as pd, pickle
-import matplotlib
 import matplotlib.pyplot as plt, os 
-matplotlib.rcParams['backend'] 
 # def calculate_shap_values(automl_object, X_train_transformed, X_test_transformed):
 #     """
 #     Calculates shap values and generates shap reports

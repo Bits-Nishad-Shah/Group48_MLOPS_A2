@@ -2,7 +2,7 @@
 from tpot import TPOTClassifier
 from sklearn.metrics import accuracy_score, classification_report
 import pickle, os
-
+# from flaml import AutoML
 # def apply_automl(X_train_transformed, X_test_transformed, y_train, y_test):
 #     """
 #     Train models using FLAML automl
