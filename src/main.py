@@ -5,8 +5,9 @@ from engineer_features import (engineer_features_with_featuretools,
                                treat_missing_values, apply_label_encoding, 
                                apply_one_hot_encoding, split_data, scale_features,
                                auto_feature_engineering_for_classification)
-from flaml_training import apply_automl
+from automl_training import apply_automl
 from generate_shap_report import calculate_shap_values
+import pandas as pd
 
 def main():
     """
@@ -51,12 +52,12 @@ def main():
     X_train_transformed, X_test_transformed = auto_feature_engineering_for_classification(X_train, 
                                                                                           y_train, 
                                                                                           X_test)
-    
+
     # Applying automl and fetching the best estimator
     automl_object = apply_automl(X_train_transformed, X_test_transformed, y_train, y_test)
 
     # Generating SHAP report
-    calculate_shap_values(automl_object, X_train_transformed, X_test_transformed)
+    #calculate_shap_values(automl_object, X_train_transformed, X_test_transformed)
 
 if __name__ == "__main__":
     main()
